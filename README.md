@@ -24,5 +24,5 @@ This project is a high-fidelity front-end development of the official website fo
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/RadouaneEddaouy/mas-fes.git]
+   git clone https://github.com/RadouaneEddaouy/mas-fes.git
    ```
