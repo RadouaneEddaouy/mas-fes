@@ -62,7 +62,7 @@ export default function MatchCenter({ currentLang }) {
 
           <div className="flex flex-col items-center gap-2">
             <img
-              src="/images/wac.png"
+              src="/images/WAC.png"
               alt="Wydad AC"
               className="w-12 h-12 object-contain"
             />
