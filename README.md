@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MAS FES - Official Website Concept
 
-## Getting Started
+This project is a high-fidelity front-end development of the official website for the Maghreb Association Sportive de Fès (MAS). The design focuses on the club's iconic identity—"The Yellow Tigers" while delivering a modern, sleek, and highly performant user experience.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 🚀 Key Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Responsive Design:** A fully optimized interface that adapts seamlessly to all devices (Mobile, Tablet, Desktop).
+- **Bilingual Support:** Smooth, dynamic toggling between Arabic and English languages.
+- **Dark Mode Identity:** A premium, high-contrast dark theme reflecting the club’s official colors.
+- **Real-time Interaction:** Features a dynamic match countdown timer.
+- **Structured Content:** Organized sections including Squad, Latest Results, Club Legacy, and Partners.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 🛠 Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework:** [Next.js](https://nextjs.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Icons:** [react-icons](https://react-icons.github.io/react-icons/)
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+### 💻 Installation & Setup
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository:
+   ```bash
+   git clone [YOUR_REPOSITORY_URL]
+   ```
