@@ -1,53 +1,57 @@
+"use client";
 import React from "react";
 
 export default function Squad({ currentLang }) {
+  const isAr = currentLang === "ar";
+
   const players = [
     {
       number: "16",
-      position: { ar: "حارس مرمى", en: "Goalkeeper" },
-      name: { ar: "صلاح الدين شهاب", en: "Salaheddine Chihab" },
+      position: { ar: "حارس مرمى", fr: "Gardien" },
+      name: { ar: "صلاح الدين شهاب", fr: "Salaheddine Chihab" },
       image: "/images/players/chihab.png",
     },
     {
       number: "9",
-      position: { ar: "مهاجم", en: "Centre-Forward" },
-      name: { ar: "سفيان بنجديدة", en: "Soufiane Benjdida" },
+      position: { ar: "مهاجم", fr: "Attaquant" },
+      name: { ar: "سفيان بنجديدة", fr: "Soufiane Benjdida" },
       image: "/images/players/benjdida.png",
     },
     {
       number: "11",
-      position: { ar: "جناح أيسر", en: "Left Winger" },
-      name: { ar: "سليمان علوش", en: "Soulyman Allouch" },
+      position: { ar: "جناح أيسر", fr: "Ailier gauche" },
+      name: { ar: "سليمان علوش", fr: "Soulyman Allouch" },
       image: "/images/players/allouch.png",
     },
     {
       number: "17",
-      position: { ar: "جناح أيمن", en: "Right Winger" },
-      name: { ar: "كيفن يامغا", en: "Kevin Yamga" },
+      position: { ar: "جناح أيمن", fr: "Ailier droit" },
+      name: { ar: "كيفن يامغا", fr: "Kevin Yamga" },
       image: "/images/players/yamga.jpg",
     },
     {
       number: "19",
-      position: { ar: "وسط ميدان", en: "Central Midfield" },
-      name: { ar: "أنس طاهيري", en: "Anas Tahiri" },
+      position: { ar: "وسط ميدان", fr: "Milieu central" },
+      name: { ar: "أنس طاهيري", fr: "Anas Tahiri" },
       image: "/images/players/tahiri.png",
     },
     {
       number: "8",
-      position: { ar: "وسط ميدان", en: "Central Midfield" },
-      name: { ar: "أشرف هرماش", en: "Achraf Harmach" },
+      position: { ar: "وسط ميدان", fr: "Milieu central" },
+      name: { ar: "أشرف هرماش", fr: "Achraf Harmach" },
       image: "/images/players/harmach.png",
+      captain: true,
     },
     {
       number: "3",
-      position: { ar: "مدافع", en: "Centre-Back" },
-      name: { ar: "عادل رحايلي", en: "Adil Rhaili" },
+      position: { ar: "مدافع", fr: "Defenseur central" },
+      name: { ar: "عادل رحايلي", fr: "Adil Rhaili" },
       image: "/images/players/rhaili.png",
     },
     {
       number: "21",
-      position: { ar: "مدافع", en: "Left-Back" },
-      name: { ar: "مروان أوحرو", en: "Marouane Ouhrou" },
+      position: { ar: "مدافع", fr: "Arriere gauche" },
+      name: { ar: "مروان أوحرو", fr: "Marouane Ouhrou" },
       image: "/images/players/ouhrou.png",
     },
   ];
@@ -55,25 +59,34 @@ export default function Squad({ currentLang }) {
   return (
     <section id="squad" className="w-full max-w-7xl mx-auto px-6 mt-24">
       <div className="flex flex-col items-center mb-16">
-        <span className="text-[#ffe600] font-mono text-xs uppercase tracking-widest bg-[#ffe600]/10 px-3 py-1 rounded-full border border-[#ffe600]/20 mb-3">
-          {currentLang === "ar" ? "الفريق الأول" : "First Team"}
-        </span>
-        <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">
-          {currentLang === "ar" ? "نجوم المغرب الفاسي" : "MAS Fes Squad"}
+        <div className="flex items-center gap-2.5 mb-3">
+          <span className="block w-6 h-[2px] bg-[#FFE600]" />
+          <span className="text-[#FFE600] text-xs font-bold uppercase tracking-[0.2em]">
+            {isAr ? "الفريق الأول" : "Premiere equipe"}
+          </span>
+          <span className="block w-6 h-[2px] bg-[#FFE600]" />
+        </div>
+        <h2
+          className={`text-white uppercase text-center ${
+            isAr
+              ? "font-[family-name:var(--font-cairo)] font-black text-3xl md:text-5xl"
+              : "font-[family-name:var(--font-bebas)] text-4xl md:text-6xl tracking-wide"
+          }`}
+        >
+          {isAr ? "نجوم المغرب الفاسي" : "L'effectif des Tigres"}
         </h2>
-        <div className="w-20 h-1.5 bg-[#ffe600] mt-4 rounded-full"></div>
+        <div className="w-20 h-1.5 bg-[#FFE600] mt-4 rounded-full" />
       </div>
 
-      {/* التعديل هنا: استخدام Flex مع تمرير أفقي للموبايل وشبكة للديسكتوب */}
       <div className="flex md:grid md:grid-cols-4 lg:grid-cols-4 gap-6 overflow-x-auto pb-8 snap-x scrollbar-hide">
         {players.map((player) => (
           <div
             key={player.number}
-            className="snap-center min-w-[240px] md:min-w-0 group relative h-80 rounded-3xl overflow-hidden bg-[#121214] border border-white/10 transition-all duration-500 hover:scale-105 hover:border-[#ffe600]/50"
+            className="snap-center min-w-[240px] md:min-w-0 group relative h-80 rounded-3xl overflow-hidden bg-[#121214] border border-white/10 transition-all duration-500 hover:scale-105 hover:border-[#FFE600]/50"
           >
             <img
               src={player.image}
-              alt={player.name.en}
+              alt={player.name.fr}
               className="w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0"
               onError={(e) => {
                 e.target.onerror = null;
@@ -81,21 +94,44 @@ export default function Squad({ currentLang }) {
               }}
             />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+
+            {player.captain && (
+              <span
+                className={`absolute top-4 ${
+                  isAr ? "right-4" : "left-4"
+                } bg-[#FFE600] text-black text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full`}
+              >
+                {isAr ? "القائد" : "Capitaine"}
+              </span>
+            )}
 
             <div className="absolute bottom-0 left-0 w-full p-6">
-              <div className="text-[#ffe600] font-black text-3xl font-mono opacity-50 group-hover:opacity-100 transition-opacity">
+              <div className="text-[#FFE600] text-4xl font-[family-name:var(--font-bebas)] opacity-50 group-hover:opacity-100 transition-opacity">
                 #{player.number}
               </div>
-              <h3 className="text-white font-bold text-lg mt-1 truncate">
-                {currentLang === "ar" ? player.name.ar : player.name.en}
+              <h3
+                className={`text-white font-bold text-lg mt-1 truncate ${
+                  isAr ? "font-[family-name:var(--font-cairo)]" : ""
+                }`}
+              >
+                {isAr ? player.name.ar : player.name.fr}
               </h3>
               <p className="text-gray-400 text-xs uppercase tracking-widest mt-0.5">
-                {currentLang === "ar" ? player.position.ar : player.position.en}
+                {isAr ? player.position.ar : player.position.fr}
               </p>
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="flex justify-center mt-10">
+        <a
+          href="/effectif"
+          className="border border-[#FFE600]/40 hover:bg-[#FFE600] hover:text-black text-[#FFE600] text-sm font-bold uppercase tracking-widest px-8 py-3.5 rounded-full transition flex items-center gap-2.5"
+        >
+          {isAr ? "التشكيلة الكاملة" : "Voir l'effectif complet"}
+        </a>
       </div>
     </section>
   );

@@ -4,3 +4,22 @@
     scroll-behavior: smooth;
   }
 }
+@keyframes kenburns {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-kenburns {
+  animation: kenburns 7s linear infinite;
+}
+html,
+body,
+#__next {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
