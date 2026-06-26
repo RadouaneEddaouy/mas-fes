@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 const newsItems = [
   {
     id: 1,
-    img: "match1.jpeg",
+    img: "match1.webp",
     ar: {
       title: "فوز ثمين خارج الديار على الوداد",
       description:
@@ -36,7 +36,7 @@ const newsItems = [
   },
   {
     id: 3,
-    img: "match3.webp",
+    img: "match5.webp",
     ar: {
       title: "ثلاث نقاط ثمينة أمام الجديدي",
       description:
@@ -50,7 +50,7 @@ const newsItems = [
   },
   {
     id: 4,
-    img: "match4.webp",
+    img: "match4.jpg",
     ar: {
       title: "تعادل بالقسط أمام الفتح الرباطي",
       description:
@@ -62,20 +62,6 @@ const newsItems = [
         "Match nul 1-1 a l'exterieur, un point precieux pour garder la dynamique intacte.",
     },
   },
-  {
-    id: 5,
-    img: "match5.webp",
-    ar: {
-      title: "تعادل قوي أمام الجيش الملكي",
-      description:
-        "تعادل سلبي 0-0 أمام متصدر الترتيب، يؤكد الصلابة الدفاعية للنمور.",
-    },
-    fr: {
-      title: "Bon point face au leader, l'AS FAR",
-      description:
-        "Match nul 0-0 au sommet, confirmant la solidite defensive des Tigres face a la meilleure attaque du championnat.",
-    },
-  },
 ];
 
 export default function Hero({ currentLang }) {
@@ -85,10 +71,10 @@ export default function Hero({ currentLang }) {
   return (
     <div id="hero" className="relative w-full h-screen overflow-hidden">
       <Swiper
-        key={currentLang}
+        key={currentlang}
         dir={isAr ? "rtl" : "ltr"}
         modules={[Navigation, Autoplay]}
-        autoplay={{ delay: 6000 }}
+        autoplay={{ delay: 4000 }}
         loop={true}
         navigation={{ nextEl: ".custom-next" }}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
