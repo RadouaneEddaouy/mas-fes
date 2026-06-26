@@ -71,7 +71,7 @@ export default function Hero({ currentLang }) {
   return (
     <div id="hero" className="relative w-full h-screen overflow-hidden">
       <Swiper
-        key={currentlang}
+        key={currentLang}
         dir={isAr ? "rtl" : "ltr"}
         modules={[Navigation, Autoplay]}
         autoplay={{ delay: 4000 }}
